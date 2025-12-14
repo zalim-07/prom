@@ -1,6 +1,5 @@
-@use 'variables' as *;
+@use "variables" as *;
 
-// Global reset
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,19 +12,40 @@ html {
 
 body {
   font-family: $font-family;
-  line-height: 100%;
   color: $text-dark;
-  background: $white;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 0 24px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0 16px;
+  }
 }
 
-a {
-  color: inherit;
+p {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+[href*="tel:"] {
   text-decoration: none;
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 22px;
 }
-

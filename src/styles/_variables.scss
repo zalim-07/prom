@@ -6,13 +6,16 @@ $text-dark: #313131;
 $white: #ffffff;
 
 // Typography
-$font-family: 'Roboto', sans-serif;
+$font-family: 'Manrope', sans-serif;
+$font-family-heading: 'Oswald', sans-serif;
 
 // Container
 $container-max-width: 1920px;
 
 // Breakpoints
-$breakpoint-lg: 1024px;
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1280px;
+$breakpoint-xl: 1440px;
 
 // Transitions
 $transition: all 0.3s ease;

@@ -1,8 +1,138 @@
-@use 'variables' as *;
+@use "variables" as *;
 
-// Container
-.container {
-  max-width: $container-max-width;
-  margin: 0 auto;
-  padding: 0 40px;
+// Стандартизированные кнопки
+.btn {
+  display: inline-block;
+  padding: 16px 32px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  transition: $transition;
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+}
+
+.btn--primary {
+  background: $primary-blue;
+  color: $white;
+  width: 325px;
+  height: 65px;
+}
+
+.btn--primary:hover {
+  opacity: 0.9;
+}
+
+.btn--outline {
+  background: transparent;
+  border-color: $white;
+  color: $white;
+  width: 325px;
+  height: 65px;
+}
+
+.btn--outline:hover {
+  background: $white;
+  color: $primary-blue;
+}
+
+.btn--outline-gray {
+  background: transparent;
+  border-color: #999;
+  color: $text-dark;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  min-width: 200px;
+  min-height: 40px;
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.btn--outline-gray:hover {
+  background: #f5f5f5;
+}
+
+// Стандартизированные заголовки
+.title {
+  font-family: $font-family-heading;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $text-dark;
+}
+
+.title--h1 {
+  font-size: 60px;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 48px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 36px;
+  }
+}
+
+.title--h2 {
+  font-family: $font-family-heading;
+  font-weight: 400;
+  color: $text-dark;
+  font-size: 46px;
+  line-height: 54px;
+  text-transform: uppercase;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 28px;
+  }
+}
+
+.title--h3 {
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+  text-transform: uppercase;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 28px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 24px;
+  }
+}
+
+.link-point {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.link-point span {
+  color: $text-dark;
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
 }

@@ -1,1 +1,103 @@
-@use 'variables' as *;
+@use "variables" as *;
+
+.header {
+  color: $white;
+  padding: 24px 0;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-size: 20px;
+  font-weight: 700;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 18px;
+  }
+}
+
+.header__logo-link {
+  display: flex;
+}
+
+.header__nav {
+  display: flex;
+  gap: 30px;
+
+  @media (max-width: $breakpoint-tablet) {
+    gap: 20px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.header__nav a {
+  color: $white;
+  text-decoration: none;
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 12px;
+  }
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media (max-width: $breakpoint-mobile) {
+    gap: 8px;
+  }
+}
+
+.header__socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.header__phone {
+  color: $white;
+  text-decoration: underline;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 1px;
+
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+  }
+}
+
+.header__phone:hover {
+  text-decoration: none;
+}
+
+.header__social img,
+.header__social svg {
+  width: 30px;
+  height: 30px;
+}
