@@ -37,7 +37,14 @@ module.exports = (env, argv) => {
     output: {
       path: path.resolve(__dirname, "dist"),
       filename: "assets/js/[name].js", // без хэшей
-      assetModuleFilename: "assets/images/[name][ext]", // без хэшей
+      assetModuleFilename: (pathData) => {
+        const filepath = pathData.filename;
+        // Сохраняем оригинальную структуру папок для assets
+        if (filepath.includes('/assets/')) {
+          return filepath.replace(/.*\/assets\//, 'assets/');
+        }
+        return "assets/images/[name][ext]";
+      },
       clean: true,
     },
 
@@ -176,6 +183,7 @@ module.exports = (env, argv) => {
       new CopyWebpackPlugin({
         patterns: [
           { from: "src/js/main.js", to: "assets/js/main.js" },
+          { from: "src/js/swiper.js", to: "assets/js/swiper.js" },
         ],
       }),
 
