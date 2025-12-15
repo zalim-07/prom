@@ -1,0 +1,35 @@
+@use "variables" as *;
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 40px;
+  font-size: 12px;
+  color: #B6B5B5;
+  background: #F8F8F8;
+  border-radius: 50px;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 16px 0;
+    font-size: 12px;
+  }
+}
+
+.breadcrumbs__link {
+  color: #999;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-blue;
+  }
+}
+
+.breadcrumbs__separator {
+  color: #999;
+}
+
+.breadcrumbs__current {
+  color: $text-dark;
+  font-weight: 500;
+}

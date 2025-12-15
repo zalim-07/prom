@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог - ПрОМ</title>
+</head>
+
+<body>
+    <!-- Header Catalog -->
+    <header class="header-catalog">
+        <div class="container">
+            <!-- Top Row -->
+            <div class="header-catalog__top">
+                <div class="header-catalog__logo">
+                    <a href="../home/index.html">
+                        <img src="../../assets/icons/logo.svg" alt="ПрОМ">
+                    </a>
+                </div>
+
+                <div class="header-catalog__search">
+                    <input type="text" placeholder="Поиск по сайту" class="header-catalog__search-input">
+                    <button class="header-catalog__search-btn">
+                        <img src="../../assets/icons/search.svg" alt="Поиск">
+                    </button>
+                </div>
+
+                <div class="header-catalog__contacts">
+                    <a href="tel:+79534431220" class="header-catalog__phone">+7 (953) 443-12-20</a>
+                    <div class="header-catalog__socials">
+                        <a href="#" class="header-catalog__social">
+                            <img src="../../assets/icons/wa.svg" alt="WhatsApp">
+                        </a>
+                        <a href="#" class="header-catalog__social">
+                            <img src="../../assets/icons/tg.svg" alt="Telegram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="header-catalog__bottom">
+                <button class="header-catalog__catalog-btn">
+                    <span>Каталог</span>
+                    <img src="../../assets/icons/menu-blue.svg" alt="" class="header-catalog__catalog-btn-icon-desktop">
+                </button>
+                <button class="header-catalog__search-btn">
+                    <img src="../../assets/icons/search.svg" alt="" class="header-catalog__catalog-btn-icon-mobile">
+                </button>
+
+                <nav class="header-catalog__nav">
+                    <a href="../home/index.html">Главная</a>
+                    <a href="#">О нас</a>
+                    <a href="#">Протезы</a>
+                    <a href="#">Каталог ТСР</a>
+                    <a href="#">Услуги</a>
+                    <a href="#">Оплата</a>
+                    <a href="#">Информация</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Контакты</a>
+                </nav>
+
+                <div class="header-catalog__actions">
+                    <a href="#" class="header-catalog__action">
+                        <img src="../../assets/icons/compare.svg" alt="Сравнить">
+                    </a>
+                    <a href="#" class="header-catalog__action header-catalog__action--cart">
+                        <img src="../../assets/icons/cart.svg" alt="Корзина">
+                    </a>
+                </div>
+
+                <!-- Mobile Actions -->
+                <div class="header-catalog__mobile-actions">
+                    <button class="header-catalog__mobile-search">
+                        <img src="../../assets/icons/search.svg" alt="Поиск">
+                    </button>
+                    <button class="header-catalog__mobile-menu">
+                        <img src="../../assets/icons/menu-blue.svg" alt="Меню">
+                        <span>МЕНЮ</span>
+                    </button>
+                    <a href="#" class="header-catalog__mobile-compare">
+                        <img src="../../assets/icons/compare.svg" alt="Сравнить">
+                        <span>Сравнить</span>
+                    </a>
+                    <a href="#" class="header-catalog__mobile-cart">
+                        <img src="../../assets/icons/cart.svg" alt="Корзина">
+                        <span>Корзина</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Search Panel -->
+    <div class="mobile-search-panel">
+        <div class="container">
+            <div class="mobile-search-panel__content">
+                <input type="text" placeholder="Поиск по сайту" class="mobile-search-panel__input">
+                <button class="mobile-search-panel__btn">
+                    <img src="../../assets/icons/search.svg" alt="Поиск">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="mobile-menu__logo">
+                <img src="../../assets/icons/logo.svg" alt="ПрОМ">
+            </div>
+            <button class="mobile-menu__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+
+        <nav class="mobile-menu__nav">
+            <a href="../home/index.html">ГЛАВНАЯ</a>
+            <a href="#">КАТАЛОГ</a>
+            <a href="#">КАТАЛОГ ТСР</a>
+            <a href="#">О НАС</a>
+            <a href="#">УСЛУГИ</a>
+            <a href="#">ЦЕНЫ</a>
+            <a href="#">FAQ</a>
+            <a href="#">БЛОГ</a>
+            <a href="#">КОНТАКТЫ</a>
+        </nav>
+
+        <div class="mobile-menu__contacts">
+            <a href="tel:+79534431220" class="mobile-menu__phone">+7 (953) 443-12-20</a>
+            <p class="mobile-menu__address">г. Тула, улица Каракозова, 71/2</p>
+            <div class="mobile-menu__socials">
+                <a href="#" class="mobile-menu__social">
+                    <img src="../../assets/icons/wa.svg" alt="WhatsApp">
+                </a>
+                <a href="#" class="mobile-menu__social">
+                    <img src="../../assets/icons/tg.svg" alt="Telegram">
+                </a>
+                <a href="#" class="mobile-menu__social">
+                    <img src="../../assets/icons/vk.svg" alt="VK">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="catalog-page">
+        <div class="container container--catalog">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs">
+                <a href="../home/index.html" class="breadcrumbs__link">Главная</a>
+                <span class="breadcrumbs__separator">/</span>
+                <span class="breadcrumbs__current">Каталог ТСР</span>
+            </nav>
+
+            <h1 class="page__title">Каталог тср</h1>
+
+            <!-- Catalog Layout -->
+            <div class="catalog-layout">
+                <!-- Left Sidebar - Filters -->
+                <aside class="catalog-filters">
+                    <!-- Category Filter -->
+                    <div class="filter-group filter-group--category">
+                        <button class="filter-group__header filter-group__header--active">
+                            <span>Каталог</span>
+                            <svg class="filter-group__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="filter-group__content">
+                            <ul class="filter-category-list">
+                                <li><a href="#" class="filter-category-list__item">Инвалидные коляски</a></li>
+                                <li><a href="#" class="filter-category-list__item">Санитарные стулья</a></li>
+                                <li><a href="#" class="filter-category-list__item">Ходунки</a></li>
+                                <li><a href="#" class="filter-category-list__item">Противопролежневые подушки</a></li>
+                                <li><a href="#" class="filter-category-list__item">Противопролежневые матрасы</a></li>
+                                <li><a href="#" class="filter-category-list__item">Медицинская мебель</a></li>
+                                <li><a href="#" class="filter-category-list__item">Приспособления для ванных комнат</a>
+                                </li>
+                                <li><a href="#" class="filter-category-list__item">Трости</a></li>
+                                <li><a href="#" class="filter-category-list__item">Костыли</a></li>
+                                <li><a href="#" class="filter-category-list__item">Аккумуляторы и аксессуары</a></li>
+                                <li><a href="#" class="filter-category-list__item">ТСР под электронный сертификат</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="filter-group filter-group--price">
+                        <button class="filter-group__header">
+                            <span>Розничная цена</span>
+                            <svg class="filter-group__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="filter-group__content">
+                            <div class="filter-price">
+                                <div class="filter-price__inputs">
+                                    <input type="number" class="filter-price__input" placeholder="0" id="price-from">
+                                    <span class="filter-price__separator">-</span>
+                                    <input type="number" class="filter-price__input" placeholder="0" id="price-to">
+                                </div>
+                                <div class="filter-price__range">
+                                    <div class="filter-price__range-track">
+                                        <div class="filter-price__range-fill"></div>
+                                    </div>
+                                    <input type="range" class="filter-price__range-input" min="0" max="200000" value="0"
+                                        id="price-range-min">
+                                    <input type="range" class="filter-price__range-input filter-price__range-input--max"
+                                        min="0" max="200000" value="200000" id="price-range-max">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Filters -->
+                    <div class="filter-group filter-group--features">
+                        <button class="filter-group__header">
+                            <span>Фильтр</span>
+                            <svg class="filter-group__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="filter-group__content">
+                            <ul class="filter-checkbox-list">
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="drive-rim">
+                                        <span>С приводом от обода колеса</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="independent-suspension">
+                                        <span>С независимой подвеской</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="high-capacity">
+                                        <span>Повышенной грузоподъемности</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="reclining-back">
+                                        <span>С откидной спинкой</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="wheelchairs">
+                                        <span>Каталки</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="lever-drive">
+                                        <span>С рычажным приводом</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="one-hand">
+                                        <span>Для управления одной рукой</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="lightweight">
+                                        <span>Облегченные</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="multifunctional">
+                                        <span>Многофункциональные</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="high-back">
+                                        <span>С высокой спинкой</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="narrow">
+                                        <span>Узкие</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="folding">
+                                        <span>Складные</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="children">
+                                        <span>Детские</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="home">
+                                        <span>Для дома</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" name="filter-feature" value="electric">
+                                        <span>Электрорегулировки</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <button class="filter-group__header">
+                            <span>Размер</span>
+                            <svg class="filter-group__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="filter-group">
+                        <button class="filter-group__header">
+                            <span>Цвет</span>
+                            <svg class="filter-group__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="filter-group">
+                        <button class="filter-group__header">
+                            <span>Вес, кг (± 5%)</span>
+                            <svg class="filter-group__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="filter-group">
+                        <button class="filter-group__header">
+                            <span>Общая ширина, см</span>
+                            <svg class="filter-group__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="filter-group">
+                        <button class="filter-group__header">
+                            <span>Грузоподъемность, кг</span>
+                            <svg class="filter-group__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="filter-group">
+                        <button class="filter-group__header">
+                            <span>Тип протеза</span>
+                            <svg class="filter-group__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="filter-group">
+                        <button class="filter-group__header">
+                            <span>Возраст</span>
+                            <svg class="filter-group__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="filter-group">
+                        <button class="filter-group__header">
+                            <span>Технология</span>
+                            <svg class="filter-group__arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Filter Actions -->
+                    <div class="filter-actions">
+                        <button class="btn btn--primary">Показать</button>
+                        <button class="btn btn--outline-gray">Сбросить</button>
+                    </div>
+                </aside>
+
+                <!-- Right Content - Products -->
+                <div class="catalog-content">
+                    <!-- Sort Filters -->
+                    <div class="catalog-sort">
+                        <button class="catalog-sort__item catalog-sort__item--active">
+                            <span>По популярности</span>
+                        </button>
+                        <button class="catalog-sort__item">
+                            <span>По сериям</span>
+                        </button>
+                        <button class="catalog-sort__item catalog-sort__item--price">
+                            <span>По цене</span>
+                            <svg class="catalog-sort__arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 2L6 10M6 2L3 5M6 2L9 5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid">
+                        <!-- Product Card 1 -->
+                        <article class="product-card">
+                            <div class="product-card__image">
+                                <img src="../../assets/images/product.png" alt="XR105">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">XR105</h3>
+                                <div class="product-card__stock">
+                                    <img src="../../assets/icons/check-green.svg" alt="В наличии">
+                                    <span>Много</span>
+                                </div>
+                                <div class="product-card__price-container">
+                                    <div class="product-card__price">49 900 руб.</div>
+                                    <div class="product-card__actions">
+                                        <button class="product-card__compare" aria-label="Сравнить">
+                                            <img src="../../assets/icons/compare-gray.svg" alt="">
+                                        </button>
+                                        <button class="product-card__cart" aria-label="Добавить в корзину">
+                                            <img src="../../assets/icons/cart-white.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__image">
+                                <img src="../../assets/images/product.png" alt="XR105">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">XR105</h3>
+                                <div class="product-card__stock">
+                                    <img src="../../assets/icons/check-green.svg" alt="В наличии">
+                                    <span>Много</span>
+                                </div>
+                                <div class="product-card__price-container">
+                                    <div class="product-card__price">49 900 руб.</div>
+                                    <div class="product-card__actions">
+                                        <button class="product-card__compare" aria-label="Сравнить">
+                                            <img src="../../assets/icons/compare-gray.svg" alt="">
+                                        </button>
+                                        <button class="product-card__cart" aria-label="Добавить в корзину">
+                                            <img src="../../assets/icons/cart-white.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__image">
+                                <img src="../../assets/images/product.png" alt="XR105">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">XR105</h3>
+                                <div class="product-card__stock">
+                                    <img src="../../assets/icons/check-green.svg" alt="В наличии">
+                                    <span>Много</span>
+                                </div>
+                                <div class="product-card__price-container">
+                                    <div class="product-card__price">49 900 руб.</div>
+                                    <div class="product-card__actions">
+                                        <button class="product-card__compare" aria-label="Сравнить">
+                                            <img src="../../assets/icons/compare-gray.svg" alt="">
+                                        </button>
+                                        <button class="product-card__cart" aria-label="Добавить в корзину">
+                                            <img src="../../assets/icons/cart-white.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__image">
+                                <img src="../../assets/images/product.png" alt="XR105">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">XR105</h3>
+                                <div class="product-card__stock">
+                                    <img src="../../assets/icons/check-green.svg" alt="В наличии">
+                                    <span>Много</span>
+                                </div>
+                                <div class="product-card__price-container">
+                                    <div class="product-card__price">49 900 руб.</div>
+                                    <div class="product-card__actions">
+                                        <button class="product-card__compare" aria-label="Сравнить">
+                                            <img src="../../assets/icons/compare-gray.svg" alt="">
+                                        </button>
+                                        <button class="product-card__cart" aria-label="Добавить в корзину">
+                                            <img src="../../assets/icons/cart-white.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__image">
+                                <img src="../../assets/images/product.png" alt="XR105">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">XR105</h3>
+                                <div class="product-card__stock">
+                                    <img src="../../assets/icons/check-green.svg" alt="В наличии">
+                                    <span>Много</span>
+                                </div>
+                                <div class="product-card__price-container">
+                                    <div class="product-card__price">49 900 руб.</div>
+                                    <div class="product-card__actions">
+                                        <button class="product-card__compare" aria-label="Сравнить">
+                                            <img src="../../assets/icons/compare-gray.svg" alt="">
+                                        </button>
+                                        <button class="product-card__cart" aria-label="Добавить в корзину">
+                                            <img src="../../assets/icons/cart-white.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__image">
+                                <img src="../../assets/images/product.png" alt="XR105">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">XR105</h3>
+                                <div class="product-card__stock">
+                                    <img src="../../assets/icons/check-green.svg" alt="В наличии">
+                                    <span>Много</span>
+                                </div>
+                                <div class="product-card__price-container">
+                                    <div class="product-card__price">49 900 руб.</div>
+                                    <div class="product-card__actions">
+                                        <button class="product-card__compare" aria-label="Сравнить">
+                                            <img src="../../assets/icons/compare-gray.svg" alt="">
+                                        </button>
+                                        <button class="product-card__cart" aria-label="Добавить в корзину">
+                                            <img src="../../assets/icons/cart-white.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__image">
+                                <img src="../../assets/images/product.png" alt="XR105">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">XR105</h3>
+                                <div class="product-card__stock">
+                                    <img src="../../assets/icons/check-green.svg" alt="В наличии">
+                                    <span>Много</span>
+                                </div>
+                                <div class="product-card__price-container">
+                                    <div class="product-card__price">49 900 руб.</div>
+                                    <div class="product-card__actions">
+                                        <button class="product-card__compare" aria-label="Сравнить">
+                                            <img src="../../assets/icons/compare-gray.svg" alt="">
+                                        </button>
+                                        <button class="product-card__cart" aria-label="Добавить в корзину">
+                                            <img src="../../assets/icons/cart-white.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__image">
+                                <img src="../../assets/images/product.png" alt="XR105">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">XR105</h3>
+                                <div class="product-card__stock">
+                                    <img src="../../assets/icons/check-green.svg" alt="В наличии">
+                                    <span>Много</span>
+                                </div>
+                                <div class="product-card__price-container">
+                                    <div class="product-card__price">49 900 руб.</div>
+                                    <div class="product-card__actions">
+                                        <button class="product-card__compare" aria-label="Сравнить">
+                                            <img src="../../assets/icons/compare-gray.svg" alt="">
+                                        </button>
+                                        <button class="product-card__cart" aria-label="Добавить в корзину">
+                                            <img src="../../assets/icons/cart-white.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__image">
+                                <img src="../../assets/images/product.png" alt="XR105">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">XR105</h3>
+                                <div class="product-card__stock">
+                                    <img src="../../assets/icons/check-green.svg" alt="В наличии">
+                                    <span>Много</span>
+                                </div>
+                                <div class="product-card__price-container">
+                                    <div class="product-card__price">49 900 руб.</div>
+                                    <div class="product-card__actions">
+                                        <button class="product-card__compare" aria-label="Сравнить">
+                                            <img src="../../assets/icons/compare-gray.svg" alt="">
+                                        </button>
+                                        <button class="product-card__cart" aria-label="Добавить в корзину">
+                                            <img src="../../assets/icons/cart-white.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__image">
+                                <img src="../../assets/images/product.png" alt="XR105">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">XR105</h3>
+                                <div class="product-card__stock">
+                                    <img src="../../assets/icons/check-green.svg" alt="В наличии">
+                                    <span>Много</span>
+                                </div>
+                                <div class="product-card__price-container">
+                                    <div class="product-card__price">49 900 руб.</div>
+                                    <div class="product-card__actions">
+                                        <button class="product-card__compare" aria-label="Сравнить">
+                                            <img src="../../assets/icons/compare-gray.svg" alt="">
+                                        </button>
+                                        <button class="product-card__cart" aria-label="Добавить в корзину">
+                                            <img src="../../assets/icons/cart-white.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__image">
+                                <img src="../../assets/images/product.png" alt="XR105">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">XR105</h3>
+                                <div class="product-card__stock">
+                                    <img src="../../assets/icons/check-green.svg" alt="В наличии">
+                                    <span>Много</span>
+                                </div>
+                                <div class="product-card__price-container">
+                                    <div class="product-card__price">49 900 руб.</div>
+                                    <div class="product-card__actions">
+                                        <button class="product-card__compare" aria-label="Сравнить">
+                                            <img src="../../assets/icons/compare-gray.svg" alt="">
+                                        </button>
+                                        <button class="product-card__cart" aria-label="Добавить в корзину">
+                                            <img src="../../assets/icons/cart-white.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-card__image">
+                                <img src="../../assets/images/product.png" alt="XR105">
+                            </div>
+                            <div class="product-card__content">
+                                <h3 class="product-card__title">XR105</h3>
+                                <div class="product-card__stock">
+                                    <img src="../../assets/icons/check-green.svg" alt="В наличии">
+                                    <span>Много</span>
+                                </div>
+                                <div class="product-card__price-container">
+                                    <div class="product-card__price">49 900 руб.</div>
+                                    <div class="product-card__actions">
+                                        <button class="product-card__compare" aria-label="Сравнить">
+                                            <img src="../../assets/icons/compare-gray.svg" alt="">
+                                        </button>
+                                        <button class="product-card__cart" aria-label="Добавить в корзину">
+                                            <img src="../../assets/icons/cart-white.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog-layout__footer">
+                <button class="btn btn--primary catalog-layout__button">
+                    Показать еще
+                </button>
+                <div class="pagination">
+                    <button class="pagination__button active">
+                        1
+                    </button>
+                    <button class="pagination__button">
+                        2
+                    </button>
+                </div>
+            </div>
+
+            <div class="catalog-layout">
+                <div></div>
+                <div class="catalog-description">
+                    <p>Ходунки – эффективное средство реабилитации, обеспечивающее инвалидам и людям, перенесшим
+                        тяжелые
+                        операции или заболевания опорно-двигательного аппарата, возможность самостоятельного
+                        передвижения. В
+                        каталоге интернет магазина компании «Ортоника» представлен большой выбор ходунков для
+                        взрослых,
+                        а
+                        наши специалисты окажут профессиональную информационную поддержку на этапе выбора и
+                        оформления
+                        заказа.</p>
+
+                    <p>Какие ходунки для инвалидов выбрать?</p>
+
+                    <p>Выбор средства реабилитации должен быть основан на индивидуальных особенностях организма
+                        больного,
+                        вес, возраст, серьезность травматизации или болезни и так далее.</p>
+
+                    <p>Выделяют основные типы ходунков для взрослых:</p>
+
+                    <ul>
+                        <li>Стационарные – простые и удобные приспособления, оснащенные четырьмя ножками сам
+                            резиновыми
+                            наконечниками в нижней части. Среди преимуществ таких моделей – обеспечение максимальной
+                            устойчивости, ремонтопригодность конструкции, доступная цена. Способ передвижения –
+                            больной
+                            сдвигает
+                            ходунки перед собой, после чего опираясь на верхнюю часть, делает шаг вперёд.</li>
+                        <li>Шагающие – это ходунки, которые сдвигаются вперед с каждым шагам больного. Такая модель
+                            не
+                            подходит
+                            для начальной стадии реабилитации, когда важна максимальная устойчивость, могут иметь
+                            место
+                            головокружения или слабость в верхних конечностях. Но она востребована среди тех, кто
+                            нуждается в
+                            специальных приспособлениях на поздних этапах выздоровления.</li>
+                        <li>Универсальные – это ходунки, сочетающие в себе особенности моделей стационарного и
+                            шагающего
+                            типа.</li>
+                        <li>Модели, оснащенные колесиками. Колесики устанавливаются на передних двух ножках
+                            ходунков.
+                            Передвижения с такой конструкцией является более простым, но он ходунки с колесиками не
+                            подходит для людей с нарушенной координации.</li>
+                        <li>Роллаторы – усовершенствованные ходунки, которые оснащаются не только колесами на каждой
+                            опоре, но также ручным тормозом и сидением для отдыха во время «стоянки». Цена таких
+                            моделей
+                            наиболее высокая, а выбор должен основываться на перспективах продолжительности
+                            предстоящей
+                            реабилитации.</li>
+                    </ul>
+
+                    <p>Что нужно учитывать?</p>
+
+                    <p>Определившись с моделью, обращайте внимание на важные моменты – рифлёные поручни не позволят
+                        рукам
+                        проскальзывать, возможность трансформации – упростит транспортировку изделия.
+                        Ходунки обеспечат инвалиду мобильность и независимость, а больному человеку обеспечат
+                        скорейшее
+                        выздоровление благодаря разумным физическим нагрузкам. Главное – правильно выбрать модель!
+                        Звоните
+                        консультантам нашей компании, и мы подберем вариант для конкретной ситуации. Доставка любых
+                        товаров
+                        из каталога осуществляется в пределах столицы и регионов России.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="consultation">
+            <div class="container">
+                <div class="consultation__content">
+                    <div class="consultation__left">
+                        <h2 class="consultation__title title--h2">
+                            НЕ УПУСТИТЕ ВОЗМОЖНОСТЬ ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ ДЛЯ ПОДБОРА ИНДИВИДУАЛЬНОГО ПРОТЕЗА
+                        </h2>
+                        <p class="consultation__text">
+                            Мы поможем вам разобраться в процессе получения компенсации и максимально быстро
+                            оформить
+                            все необходимые
+                            документы.
+                        </p>
+                    </div>
+
+                    <div class="consultation__right">
+                        <h3 class="consultation__form-title">Свяжитесь с нами для консультации</h3>
+                        <div class="consultation__form-content">
+                            <form>
+                                <div class="form-group">
+                                    <span class="form-group__icon">
+                                        <img src="../../assets/icons/phone.svg" alt="Phone">
+                                    </span>
+                                    <input type="tel" class="form-input" placeholder="Номер телефона">
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="form-group__icon">
+                                        <img src="../../assets/icons/email.svg" alt="Email">
+                                    </span>
+                                    <input type="email" class="form-input" placeholder="E-mail">
+                                </div>
+
+                                <button type="submit" class="btn btn--primary consultation__submit">
+                                    Получить консультацию
+                                </button>
+                                <label class="form-checkbox">
+                                    <input type="checkbox" checked>
+                                    <span>Соглашаюсь с условиями передачи данных</span>
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="consultation__contacts">
+                        <a href="#" class="consultation__icon consultation__icon--whatsapp">
+                            <img src="../../assets/icons/wa.svg" alt="WhatsApp">
+                        </a>
+                        <a href="#" class="consultation__icon consultation__icon--telegram">
+                            <img src="../../assets/icons/tg.svg" alt="Telegram">
+                        </a>
+                        <a href="tel:+79534431220" class="consultation__phone">+7 (953) 443-12-20</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <!-- Logo Column -->
+                <div class="footer__column">
+                    <div class="footer__logo">
+                        <img src="../../assets/icons/logo-footer.svg" alt="ПрОМ">
+                    </div>
+                </div>
+
+                <div class="footer__columns">
+                    <!-- Menu Column -->
+                    <div class="footer__column">
+                        <h3 class="footer__title">МЕНЮ</h3>
+                        <ul class="footer__menu">
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Цены</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Catalog Column -->
+                    <div class="footer__column">
+                        <h3 class="footer__title">КАТАЛОГ</h3>
+                        <ul class="footer__menu">
+                            <li><a href="#">Каталог ТСР</a></li>
+                            <li><a href="#">Протезы верхних конечностей</a></li>
+                            <li><a href="#">Протезы нижних конечностей</a></li>
+                            <li><a href="#">Детские протезы</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Info Column -->
+                    <div class="footer__column">
+                        <h3 class="footer__title">ИНФОРМАЦИЯ</h3>
+                        <ul class="footer__menu">
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                            <li><a href="#">Пользовательское соглашение</a></li>
+                            <li><a href="#">Публичная оферта</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacts Column -->
+                    <div class="footer__column">
+                        <h3 class="footer__title">КОНТАКТЫ</h3>
+                        <p class="footer__address">
+                            Адрес: г. Тула, улица Каракозова, 71/2
+                        </p>
+                        <a href="tel:+79534431220" class="footer__phone">+7 (953) 443-12-20</a>
+                        <div class="footer__socials">
+                            <a href="#" class="footer__social footer__social--whatsapp">
+                                <img src="../../assets/icons/wa.svg" alt="WhatsApp">
+                            </a>
+                            <a href="#" class="footer__social footer__social--telegram">
+                                <img src="../../assets/icons/tg.svg" alt="Telegram">
+                            </a>
+                            <a href="#" class="footer__social footer__social--vk">
+                                <img src="../../assets/icons/vk.svg" alt="VK">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

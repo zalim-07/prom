@@ -28,6 +28,10 @@ body {
   @media (max-width: $breakpoint-mobile) {
     padding: 0 10px;
   }
+
+  &--catalog {
+    max-width: 1515px;
+  }
 }
 
 p {
@@ -67,5 +71,20 @@ p {
 
   .mobile-only {
     display: flex !important;
+  }
+}
+
+.catalog-description {
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 25px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
+    margin-bottom: 25px;
   }
 }

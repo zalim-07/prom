@@ -2,8 +2,10 @@
 @use "variables";
 @use "common";
 @use "components";
+@use "breadcrumbs";
 @use "swiper";
 @use "header";
+@use "header-catalog";
 @use "hero";
 @use "steps";
 @use "products";
@@ -12,4 +14,5 @@
 @use "consultation";
 @use "examples";
 @use "reviews";
+@use "catalog";
 @use "footer";

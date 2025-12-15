@@ -62,9 +62,9 @@
 
 .btn--outline-gray {
   background: transparent;
-  border-color: #313131;
+  border-color: $text-dark;
   border-width: 1px;
-  color: #313131;
+  color: $text-dark;
   padding-top: 6px;
   padding-bottom: 6px;
   min-width: 200px;
@@ -157,4 +157,15 @@
 
 .swiper-pagination-bullet-active {
   background-color: $primary-blue;;
+}
+
+.page__title {
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: $text-dark;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
