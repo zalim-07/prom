@@ -12,25 +12,23 @@
   <header class="header">
     <div class="container">
       <div class="header__content">
-        <div class="header__left">
-          <div class="header__logo">
-            <a href="#" class="header__logo-link">
-              <img src="../../assets/icons/logo.svg" alt="ПрОМ">
-            </a>
-          </div>
-
-          <nav class="header__nav">
-            <a href="#">ГЛАВНАЯ</a>
-            <a href="#">КАТАЛОГ</a>
-            <a href="#">КАТАЛОГ ТСР</a>
-            <a href="#">О НАС</a>
-            <a href="#">УСЛУГИ</a>
-            <a href="#">ЦЕНЫ</a>
-            <a href="#">FAQ</a>
-            <a href="#">БЛОГ</a>
-            <a href="#">КОНТАКТЫ</a>
-          </nav>
+        <div class="header__logo">
+          <a href="#" class="header__logo-link">
+            <img src="../../assets/icons/logo.svg" alt="ПрОМ">
+          </a>
         </div>
+
+        <nav class="header__nav">
+          <a href="#">ГЛАВНАЯ</a>
+          <a href="#">КАТАЛОГ</a>
+          <a href="#">КАТАЛОГ ТСР</a>
+          <a href="#">О НАС</a>
+          <a href="#">УСЛУГИ</a>
+          <a href="#">ЦЕНЫ</a>
+          <a href="#">FAQ</a>
+          <a href="#">БЛОГ</a>
+          <a href="#">КОНТАКТЫ</a>
+        </nav>
 
         <div class="header__contacts">
           <a href="tel:+79534431220" class="header__phone">+7 (953) 443-12-20</a>
@@ -43,9 +41,58 @@
             </a>
           </div>
         </div>
+
+        <button class="burger-menu">
+          <img src="../../assets/icons/menu.svg" alt="">
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu__header">
+      <div class="mobile-menu__logo">
+        <img src="../../assets/icons/logo.svg" alt="ПрОМ">
+      </div>
+      <button class="mobile-menu__close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-menu__nav">
+      <a href="#">ГЛАВНАЯ</a>
+      <a href="#">КАТАЛОГ</a>
+      <a href="#">КАТАЛОГ ТСР</a>
+      <a href="#">О НАС</a>
+      <a href="#">УСЛУГИ</a>
+      <a href="#">ЦЕНЫ</a>
+      <a href="#">FAQ</a>
+      <a href="#">БЛОГ</a>
+      <a href="#">КОНТАКТЫ</a>
+    </nav>
+
+    <div class="mobile-menu__contacts">
+      <a href="tel:+79534431220" class="mobile-menu__phone">+7 (953) 443-12-20</a>
+      <p class="mobile-menu__address">г. Тула, улица Каракозова, 71/2</p>
+      <div class="mobile-menu__socials">
+        <a href="#" class="mobile-menu__social">
+          <img src="../../assets/icons/wa.svg" alt="WhatsApp">
+        </a>
+        <a href="#" class="mobile-menu__social">
+          <img src="../../assets/icons/tg.svg" alt="Telegram">
+        </a>
+        <a href="#" class="mobile-menu__social">
+          <img src="../../assets/icons/vk.svg" alt="VK">
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -66,7 +113,8 @@
 
         <div class="hero__buttons">
           <a href="#" class="btn btn--primary">Каталог протезов</a>
-          <a href="#" class="btn btn--outline">Получить протез</a>
+          <a href="#" class="btn btn--outline desctop-only">Получить протез</a>
+          <a href="#" class="btn btn--outline mobile-only">Получить консультацию</a>
         </div>
       </div>
     </div>
@@ -95,7 +143,7 @@
         <!-- Step 1 -->
         <div class="step-card step-card--blue">
           <img src="../../assets/icons/step-1.svg" alt="Step 1" class="step-card__number">
-          <h3 class="step-card__title">ПЕРВИЧНАЯ<br>КОНСУЛЬТАЦИЯ И<br>ДИАГНОСТИКА</h3>
+          <h3 class="step-card__title">ПЕРВИЧНАЯ <br>КОНСУЛЬТАЦИЯ И <br>ДИАГНОСТИКА</h3>
           <ul class="step-card__list">
             <li>Бесплатная консультация опытного специалиста-ортопеда</li>
             <li>Подробный осмотр и оценка ваших возможностей</li>
@@ -108,7 +156,7 @@
         <!-- Step 2 -->
         <div class="step-card">
           <img src="../../assets/icons/step-2.svg" alt="Step 2" class="step-card__number">
-          <h3 class="step-card__title">ОФОРМЛЕНИЕ<br>И ИЗГОТОВЛЕНИЕ<br>ПРОТЕЗА</h3>
+          <h3 class="step-card__title">ОФОРМЛЕНИЕ <br>И ИЗГОТОВЛЕНИЕ <br>ПРОТЕЗА</h3>
           <ul class="step-card__list">
             <li>Заключение договора с подробным описанием всех условий</li>
             <li>Точные замеры и создание слепков</li>
@@ -121,7 +169,7 @@
         <!-- Step 3 -->
         <div class="step-card  step-card--gray">
           <img src="../../assets/icons/step-3.svg" alt="Step 3" class="step-card__number">
-          <h3 class="step-card__title">ПОЛУЧЕНИЕ<br>И АДАПТАЦИЯ<br>К ИСПОЛЬЗОВАНИЮ</h3>
+          <h3 class="step-card__title">ПОЛУЧЕНИЕ <br>И АДАПТАЦИЯ <br>К ИСПОЛЬЗОВАНИЮ</h3>
           <ul class="step-card__list">
             <li>Финальная примерка и тестирование</li>
             <li>Обучение правильному использованию протеза</li>
@@ -300,15 +348,6 @@
             Мы поможем вам разобраться в процессе получения компенсации и максимально быстро оформить все необходимые
             документы.
           </p>
-          <div class="consultation__contacts">
-            <a href="#" class="consultation__icon consultation__icon--whatsapp">
-              <img src="../../assets/icons/wa.svg" alt="WhatsApp">
-            </a>
-            <a href="#" class="consultation__icon consultation__icon--telegram">
-              <img src="../../assets/icons/tg.svg" alt="Telegram">
-            </a>
-            <a href="tel:+79534431220" class="consultation__phone">+7 (953) 443-12-20</a>
-          </div>
         </div>
 
         <div class="consultation__right">
@@ -339,6 +378,17 @@
             </form>
           </div>
         </div>
+
+
+        <div class="consultation__contacts">
+          <a href="#" class="consultation__icon consultation__icon--whatsapp">
+            <img src="../../assets/icons/wa.svg" alt="WhatsApp">
+          </a>
+          <a href="#" class="consultation__icon consultation__icon--telegram">
+            <img src="../../assets/icons/tg.svg" alt="Telegram">
+          </a>
+          <a href="tel:+79534431220" class="consultation__phone">+7 (953) 443-12-20</a>
+        </div>
       </div>
     </div>
   </section>
@@ -354,19 +404,23 @@
         </a>
       </div>
 
-      <div class="examples__grid">
-        <div class="examples__item">
-          <img src="../../assets/images/examples/img.png" alt="Протез 1">
+      <div class="swiper examples__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide examples__item">
+            <img src="../../assets/images/examples/img.png" alt="Протез 1">
+          </div>
+          <div class="swiper-slide examples__item">
+            <img src="../../assets/images/examples/img-1.png" alt="Протез 2">
+          </div>
+          <div class="swiper-slide examples__item">
+            <img src="../../assets/images/examples/img-2.png" alt="Протез 3">
+          </div>
+          <div class="swiper-slide examples__item">
+            <img src="../../assets/images/examples/img-3.png" alt="Протез 4">
+          </div>
         </div>
-        <div class="examples__item">
-          <img src="../../assets/images/examples/img-1.png" alt="Протез 2">
-        </div>
-        <div class="examples__item">
-          <img src="../../assets/images/examples/img-2.png" alt="Протез 3">
-        </div>
-        <div class="examples__item">
-          <img src="../../assets/images/examples/img-3.png" alt="Протез 4">
-        </div>
+        <!-- Pagination -->
+        <div class="swiper-pagination examples__pagination"></div>
       </div>
     </div>
   </section>
@@ -382,13 +436,28 @@
         </a>
       </div>
 
-      <div class="reviews__grid">
-        <div class="reviews__item">
-          <!-- Плейсхолдер для видео отзыва 1 -->
+      <div class="swiper reviews__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="reviews__item">
+              <!-- Плейсхолдер для видео отзыва 1 -->
+              <div class="review-placeholder">
+                <p>Отзыв клиента 1</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="reviews__item">
+            <!-- Плейсхолдер для видео отзыва 2 -->
+              <div class="review-placeholder">
+                <p>Отзыв клиента 2</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="reviews__item">
-          <!-- Плейсхолдер для видео отзыва 2 -->
-        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination reviews__pagination"></div>
       </div>
     </div>
   </section>

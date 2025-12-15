@@ -33,6 +33,7 @@
     "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
-    "imagemin-webp": "^6.1.0"
+    "imagemin-webp": "^6.1.0",
+    "swiper": "^12.0.3"
   }
 }

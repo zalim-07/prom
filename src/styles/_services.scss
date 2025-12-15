@@ -9,7 +9,6 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    padding: 40px 0;
   }
 }
 
@@ -27,7 +26,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 }
 
@@ -36,6 +35,10 @@
 
   @media (max-width: $breakpoint-tablet) {
     font-size: 36px;
+  }
+
+  @media screen and (max-width: $breakpoint-lg) {
+    margin-bottom: 0;
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -50,6 +53,10 @@
   color: $text-dark;
   text-decoration: none;
   font-size: 14px;
+
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .services__grid {
@@ -64,7 +71,7 @@
 
   @media (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 0;
   }
 }
 
@@ -84,12 +91,14 @@
   @media (max-width: $breakpoint-tablet) {
     padding: 20px;
     min-height: 260px;
+    border-radius: 30px;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    padding: 24px;
+    padding: 40px 10px;
     min-height: auto;
-    border-radius: 16px;
+    border-radius: 0;
+    gap: 20px;
   }
 }
 
@@ -110,6 +119,7 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
+    line-height: 30px;
   }
 }
 
@@ -119,6 +129,8 @@
   margin-bottom: 0;
 
   @media (max-width: $breakpoint-tablet) {
+    font-size: 16px;
+    padding-right: 0;
   }
 
   @media (max-width: $breakpoint-mobile) {

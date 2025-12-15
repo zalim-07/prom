@@ -21,7 +21,8 @@
 
   @media (max-width: $breakpoint-mobile) {
     padding: 14px 28px;
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
@@ -30,6 +31,11 @@
   color: $white;
   width: 325px;
   height: 65px;
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+    max-width: 460px;
+  }
 }
 
 .btn--primary:hover {
@@ -42,6 +48,11 @@
   color: $white;
   width: 325px;
   height: 65px;
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+    max-width: 460px;
+  }
 }
 
 .btn--outline:hover {
@@ -51,17 +62,23 @@
 
 .btn--outline-gray {
   background: transparent;
-  border-color: #999;
-  color: $text-dark;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  border-color: #313131;
+  border-width: 1px;
+  color: #313131;
+  padding-top: 6px;
+  padding-bottom: 6px;
   min-width: 200px;
   min-height: 40px;
-  font-family: $font-family;
+  font-family: "Manrope", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
   text-transform: uppercase;
+
+  @media (max-width: $breakpoint-mobile) {
+    max-width: 460px;
+    width: 100%;
+  }
 }
 
 .btn--outline-gray:hover {
@@ -102,6 +119,7 @@
 
   @media (max-width: $breakpoint-mobile) {
     font-size: 28px;
+    line-height: 34px;
   }
 }
 
@@ -135,4 +153,8 @@
   font-size: 20px;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $primary-blue;;
 }

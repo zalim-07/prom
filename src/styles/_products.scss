@@ -9,7 +9,7 @@
   }
   
   @media (max-width: $breakpoint-mobile) {
-    padding: 40px 0;
+    padding: 30px 0 60px;
   }
 }
 
@@ -23,7 +23,7 @@
   
   @media (max-width: $breakpoint-mobile) {
     font-size: 28px;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 }
 
@@ -34,7 +34,7 @@
   
   @media (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 30px;
   }
 }
 
@@ -50,9 +50,10 @@
   margin-bottom: 40px;
   
   @media (max-width: $breakpoint-mobile) {
-    height: 200px;
-    border-radius: 16px;
-    margin-bottom: 16px;
+    height: inherit;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    aspect-ratio: 1 / 1;
   }
 }
 
@@ -75,8 +76,9 @@
   }
   
   @media (max-width: $breakpoint-mobile) {
-    font-size: 24px;
-    margin-bottom: 12px;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 15px;
   }
 }
 
@@ -90,8 +92,9 @@
   max-width: 510px;
   
   @media (max-width: $breakpoint-mobile) {
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 15px;
   }
 }
 

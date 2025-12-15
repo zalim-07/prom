@@ -22,11 +22,11 @@ body {
   width: 100%;
 
   @media (max-width: $breakpoint-tablet) {
-    padding: 0 24px;
+    padding: 0 16px;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    padding: 0 16px;
+    padding: 0 10px;
   }
 }
 
@@ -34,8 +34,14 @@ p {
   font-family: $font-family;
   font-weight: 400;
   font-size: 20px;
-  line-height: 140%;
+  line-height: 27px;
   margin-bottom: 25px;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 22px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -48,4 +54,18 @@ p {
   font-weight: 400;
   font-size: 22px;
   line-height: 22px;
+}
+
+.mobile-only {
+  display: none !important;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .desctop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: flex !important;
+  }
 }

@@ -18,7 +18,7 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    padding: 40px 0;
+
   }
 }
 
@@ -43,7 +43,7 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    gap: 40px;
+    gap: 60px;
   }
 }
 
@@ -61,24 +61,22 @@
 
   @media (max-width: $breakpoint-tablet) {
     font-size: 36px;
-    margin-bottom: 24px;
-    padding-bottom: 24px;
+    line-height: 40px;
+    margin-bottom: 27px;
+    padding-bottom: 25px;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: 28px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
   }
 }
 
 .benefits__description {
   margin-bottom: 25px;
   max-width: 580px;
+  
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: 14px;
-    margin-bottom: 24px;
+    margin-bottom: 60px;
   }
 }
 
@@ -96,17 +94,20 @@
 
   @media (max-width: $breakpoint-tablet) {
     gap: 32px;
+    height: inherit;
+    aspect-ratio: inherit;
+    background-image: none;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    gap: 24px;
+    gap: 20px;
     height: auto;
   }
 }
 
 .benefit-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 
   &:nth-child(1) {
@@ -138,19 +139,11 @@
       margin-left: 81px;
     }
   }
-
-  @media (max-width: $breakpoint-mobile) {
-    gap: 16px;
-  }
 }
 
 .benefit-item__icon {
-  border-radius: 50%;
-  border: 2px solid $white;
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 30px;
 
   @media (max-width: $breakpoint-mobile) {
   }
@@ -165,9 +158,9 @@
 
   @media (max-width: $breakpoint-tablet) {
     font-size: 20px;
+    line-height: 30px;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: 16px;
   }
 }

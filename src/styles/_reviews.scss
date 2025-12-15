@@ -9,7 +9,6 @@
   }
   
   @media (max-width: $breakpoint-mobile) {
-    padding: 40px 0;
   }
 }
 
@@ -27,7 +26,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 }
 
@@ -36,6 +35,10 @@
   
   @media (max-width: $breakpoint-tablet) {
     font-size: 36px;
+  }
+
+  @media screen and (max-width: $breakpoint-lg) {
+    margin-bottom: 0;
   }
   
   @media (max-width: $breakpoint-mobile) {
@@ -50,6 +53,10 @@
   color: $text-dark;
   text-decoration: none;
   font-size: 14px;
+
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .reviews__grid {
@@ -76,8 +83,8 @@
   }
   
   @media (max-width: $breakpoint-mobile) {
-    height: 250px;
-    border-radius: 16px;
+    height: 225px;
+    border-radius: 30px;
   }
 }
 
@@ -88,6 +95,6 @@
   border-radius: 24px;
   
   @media (max-width: $breakpoint-mobile) {
-    border-radius: 16px;
+    border-radius: 30px;
   }
 }

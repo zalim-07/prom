@@ -8,7 +8,7 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    padding: 40px 0;
+    padding: 60px 0 30px;
   }
 }
 
@@ -26,7 +26,7 @@
   @media (max-width: $breakpoint-mobile) {
     flex-direction: column;
     gap: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 }
 
@@ -34,11 +34,12 @@
   max-width: 780px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px 20px;
 
   @media (max-width: $breakpoint-mobile) {
     max-width: 100%;
     flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -48,7 +49,7 @@
   }
 
   @media (max-width: $breakpoint-mobile) {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
   }
 }
 
@@ -61,8 +62,8 @@
   line-height: 27px;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
@@ -81,11 +82,12 @@
 
   @media (max-width: $breakpoint-tablet) {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 30px;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    gap: 16px;
+    margin-left: -10px;
+    margin-right: -10px;
   }
 }
 
@@ -103,12 +105,29 @@
   }
 
   @media (max-width: $breakpoint-tablet) {
-    padding: 32px;
+  }
+
+  @media screen and (max-width: $breakpoint-lg) {
   }
 
   @media (max-width: $breakpoint-mobile) {
-    padding: 24px;
-    border-radius: 16px;
+    min-height: 450px;
+    padding: 24px 10px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    &:first-child {
+      br {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      min-height: 550px;
+    }
   }
 }
 
@@ -119,7 +138,7 @@
 }
 
 .step-card--gray {
-  background: #F5F5F5;
+  background: #f5f5f5;
 }
 
 .step-card__number {
@@ -134,6 +153,7 @@
   }
 
   @media (max-width: $breakpoint-tablet) {
+    right: 10px;
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -159,13 +179,12 @@
   margin-bottom: 30px;
 
   @media (max-width: $breakpoint-tablet) {
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 25px;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: 20px;
-    margin-bottom: 16px;
   }
 }
 
@@ -188,8 +207,10 @@
   line-height: 1.35;
 
   @media (max-width: $breakpoint-mobile) {
-    font-size: 13px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    margin-bottom: 0px;
+    line-height: 22px;
+    padding-left: 23px;
   }
 }
 
