@@ -11,8 +11,7 @@
   border-radius: 50px;
 
   @media (max-width: $breakpoint-mobile) {
-    padding: 16px 0;
-    font-size: 12px;
+    display: none;
   }
 }
 

@@ -45,6 +45,18 @@
 
 .product-card__content {
   padding: 25px 20px;
+  display: grid;
+  align-items: center;
+  gap: 0;
+  grid-template: auto auto/ 1fr 51px 41px;
+
+  @media (max-width: calc($container-max-width - 60px)) {
+    grid-template: auto auto/ 1fr 41px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 12px 10px;
+  }
 }
 
 

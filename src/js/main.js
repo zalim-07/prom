@@ -72,11 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Mobile Search Panel (for catalog page)
-  const catalogSearchBtn = document.querySelector('.header-catalog__search-btn');
+  const searchBtn = document.querySelector('.header-catalog__search-btn');
   const mobileSearchPanel = document.querySelector('.mobile-search-panel');
 
-  if (catalogSearchBtn && mobileSearchPanel) {
-    catalogSearchBtn.addEventListener('click', () => {
+  if (searchBtn && mobileSearchPanel) {
+    searchBtn.addEventListener('click', () => {
+      console.log('searchBtn clicked');
       mobileSearchPanel.classList.toggle('active');
     });
   }
@@ -196,5 +197,65 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
+  });
+
+  // Mobile Filter Button
+  const mobileFilterBtn = document.querySelector('.catalog-mobile-filter-btn');
+  const catalogFilters = document.querySelector('.catalog-filters');
+  const catalogFiltersClose = document.querySelector('.catalog-filters__close');
+
+  // Create overlay if it doesn't exist
+  let mobileFilterOverlay = document.querySelector('.mobile-filter-overlay');
+  if (!mobileFilterOverlay) {
+    mobileFilterOverlay = document.createElement('div');
+    mobileFilterOverlay.className = 'mobile-filter-overlay';
+    document.body.appendChild(mobileFilterOverlay);
+  }
+
+  const closeMobileFilters = () => {
+    if (catalogFilters) {
+      catalogFilters.classList.remove('mobile-open', 'active');
+      if (mobileFilterOverlay) {
+        mobileFilterOverlay.classList.remove('active');
+      }
+      body.classList.remove('menu-open');
+    }
+  };
+
+  const openMobileFilters = () => {
+    if (catalogFilters) {
+      catalogFilters.classList.add('mobile-open');
+      body.classList.add('menu-open');
+      
+      // Trigger animation by adding active class
+      // Use requestAnimationFrame to ensure display:block is applied first
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          catalogFilters.classList.add('active');
+          if (mobileFilterOverlay) {
+            mobileFilterOverlay.classList.add('active');
+          }
+        });
+      });
+    }
+  };
+
+  if (mobileFilterOverlay) {
+    mobileFilterOverlay.addEventListener('click', closeMobileFilters);
+  }
+
+  if (mobileFilterBtn) {
+    mobileFilterBtn.addEventListener('click', openMobileFilters);
+  }
+
+  if (catalogFiltersClose) {
+    catalogFiltersClose.addEventListener('click', closeMobileFilters);
+  }
+
+  // Close on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && catalogFilters && catalogFilters.classList.contains('mobile-open')) {
+      closeMobileFilters();
+    }
   });
 });

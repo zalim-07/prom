@@ -87,4 +87,16 @@ p {
     margin: 0;
     margin-bottom: 25px;
   }
+
+  li {
+    position: relative;
+    &::before {
+      content: '•';
+      display: inline-block;
+      position: absolute;
+      left: -15px;
+      
+      border-radius: 50%;
+    }
+  }
 }
