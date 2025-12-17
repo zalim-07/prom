@@ -55,4 +55,28 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
+
+  // Product Gallery Swiper with Thumbnails
+  const productThumbsSwiper = document.querySelector('.product-gallery__thumbs');
+  const productMainSwiper = document.querySelector('.product-gallery__main');
+  
+  if (productThumbsSwiper && productMainSwiper) {
+    const thumbsSwiper = new window.Swiper('.product-gallery__thumbs', {
+      modules: [window.SwiperModules.Navigation],
+      spaceBetween: 5,
+      slidesPerView: 6,
+      navigation: {
+        nextEl: '.product-gallery .swiper-button-next',
+        prevEl: '.product-gallery .swiper-button-prev',
+      },
+    });
+
+    const mainSwiper = new window.Swiper('.product-gallery__main', {
+      modules: [window.SwiperModules.Thumbs],
+      spaceBetween: 10,
+      thumbs: {
+        swiper: thumbsSwiper,
+      },
+    });
+  }
 });

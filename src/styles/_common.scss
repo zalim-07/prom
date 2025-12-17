@@ -29,6 +29,7 @@ body {
     padding: 0 10px;
   }
 
+  &--narrow,
   &--catalog {
     max-width: 1515px;
   }
@@ -50,6 +51,11 @@ p {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+strong,
+b {
+  font-weight: 600;
 }
 
 [href*="tel:"] {
@@ -91,11 +97,11 @@ p {
   li {
     position: relative;
     &::before {
-      content: '•';
+      content: "•";
       display: inline-block;
       position: absolute;
       left: -15px;
-      
+
       border-radius: 50%;
     }
   }

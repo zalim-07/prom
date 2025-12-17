@@ -258,4 +258,32 @@ document.addEventListener('DOMContentLoaded', () => {
       closeMobileFilters();
     }
   });
+
+  // Product page functionality
+  // Expand/collapse characteristics
+  const specsExpandLink = document.querySelector('.product-info__specs-expand-link');
+  const specsTable = document.querySelector('.product-info__specs-table');
+  
+  if (specsExpandLink && specsTable) {
+    const hiddenRows = specsTable.querySelectorAll('.product-info__specs-row-hidden');
+    
+    specsExpandLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isExpanded = hiddenRows[0] && hiddenRows[0].classList.contains('product-info__specs-row-visible');
+      
+      hiddenRows.forEach(row => {
+        if (isExpanded) {
+          row.classList.remove('product-info__specs-row-visible');
+        } else {
+          row.classList.add('product-info__specs-row-visible');
+        }
+      });
+      
+      if (isExpanded) {
+        specsExpandLink.textContent = 'Все характеристики';
+      } else {
+        specsExpandLink.textContent = 'Скрыть характеристики';
+      }
+    });
+  }
 });

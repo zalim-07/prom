@@ -18,6 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
 
   @media (max-width: $breakpoint-mobile) {
     padding: 14px 28px;
