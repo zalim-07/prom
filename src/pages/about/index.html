@@ -1,11 +1,508 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>О нас</title>   
-  </head>
-  <body>
-    About
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Наши услуги</title>
+</head>
+
+<body>
+  <!-- Header Catalog -->
+  <header class="header-catalog">
+    <div class="container">
+      <!-- Top Row -->
+      <div class="header-catalog__top">
+        <div class="header-catalog__logo">
+          <a href="../home/index.html">
+            <img src="../../assets/icons/logo-dark.svg" alt="ПрОМ" />
+          </a>
+        </div>
+
+        <div class="header-catalog__search">
+          <input type="text" placeholder="Поиск по сайту" class="header-catalog__search-input" />
+          <button class="header-catalog__search-btn">
+            <img src="../../assets/icons/search.svg" alt="Поиск" />
+          </button>
+        </div>
+
+        <div class="header-catalog__contacts">
+          <a href="tel:+79534431220" class="header-catalog__phone">+7 (953) 443-12-20</a>
+          <div class="header-catalog__socials">
+            <a href="#" class="header-catalog__social">
+              <img src="../../assets/icons/wa.svg" alt="WhatsApp" />
+            </a>
+            <a href="#" class="header-catalog__social">
+              <img src="../../assets/icons/tg.svg" alt="Telegram" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="header-catalog__bottom">
+        <div class="header-catalog__bottom-left">
+          <button class="header-catalog__catalog-btn">
+            <span>Каталог</span>
+            <img src="../../assets/icons/menu-blue.svg" alt="" class="header-catalog__catalog-btn-icon-desktop" />
+          </button>
+          <button class="header-catalog__search-btn">
+            <img src="../../assets/icons/search.svg" alt="" class="header-catalog__catalog-btn-icon-mobile" />
+          </button>
+          <button class="header-catalog__mobile-menu">
+            <span>МЕНЮ</span>
+            <img src="../../assets/icons/menu-blue.svg" alt="Меню" />
+          </button>
+        </div>
+
+        <nav class="header-catalog__nav">
+          <a href="../home/index.html">Главная</a>
+          <a href="#">О нас</a>
+          <a href="#">Протезы</a>
+          <a href="#">Каталог ТСР</a>
+          <a href="#">Услуги</a>
+          <a href="#">Оплата</a>
+          <a href="#">Информация</a>
+          <a href="#">FAQ</a>
+          <a href="#">Контакты</a>
+        </nav>
+
+        <div class="header-catalog__actions">
+          <a href="#" class="header-catalog__action">
+            <img src="../../assets/icons/compare.svg" alt="Сравнить" />
+          </a>
+          <a href="#" class="header-catalog__action header-catalog__action--cart">
+            <img src="../../assets/icons/cart.svg" alt="Корзина" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search Panel -->
+  <div class="mobile-search-panel">
+    <div class="container">
+      <div class="mobile-search-panel__content">
+        <input type="text" placeholder="Поиск по сайту" class="mobile-search-panel__input" />
+        <button class="mobile-search-panel__btn">
+          <img src="../../assets/icons/search.svg" alt="Поиск" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu__header">
+      <div class="mobile-menu__logo">
+        <img src="../../assets/icons/logo.svg" alt="ПрОМ" />
+      </div>
+      <button class="mobile-menu__close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-menu__nav">
+      <a href="../home/index.html">ГЛАВНАЯ</a>
+      <a href="#">КАТАЛОГ</a>
+      <a href="#">КАТАЛОГ ТСР</a>
+      <a href="#">О НАС</a>
+      <a href="#">УСЛУГИ</a>
+      <a href="#">ЦЕНЫ</a>
+      <a href="#">FAQ</a>
+      <a href="#">БЛОГ</a>
+      <a href="#">КОНТАКТЫ</a>
+    </nav>
+
+    <div class="mobile-menu__contacts">
+      <a href="tel:+79534431220" class="mobile-menu__phone">+7 (953) 443-12-20</a>
+      <p class="mobile-menu__address">г. Тула, улица Каракозова, 71/2</p>
+      <div class="mobile-menu__socials">
+        <a href="#" class="mobile-menu__social">
+          <img src="../../assets/icons/wa.svg" alt="WhatsApp" />
+        </a>
+        <a href="#" class="mobile-menu__social">
+          <img src="../../assets/icons/tg.svg" alt="Telegram" />
+        </a>
+        <a href="#" class="mobile-menu__social">
+          <img src="../../assets/icons/vk.svg" alt="VK" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="page">
+    <section class="page-hero page-hero--about">
+      <div class="container container--narrow">
+        <div class="page-hero__content">
+          <h1 class="page-hero__title">
+            О компании
+          </h1>
+          <p class="page-hero__text">
+            В мастерской «ПРОМ» каждый протез — уникальное решение под ваши потребности. Мы учитываем образ
+            жизни, активность и личные пожелания, чтобы вернуть вам уверенность в каждом движении.
+          </p>
+          <div class="hero__buttons">
+            <button class="btn btn--primary">
+              Каталог протезов
+            </button>
+            <button class="btn btn--outline">
+              Получить консультацию
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-intro">
+      <div class="container">
+
+        <div class="section__header section__header--about">
+          <h2 class="section__title title--h2 about-intro__title">«ПРОМ» ПОМОГАЕТ ЛЮДЯМ ВОЗВРАЩАТЬСЯ
+            К ПОЛНОЦЕННОЙ ЖИЗНИ. МЫ СОЗДАЁМ ПРОТЕЗЫ,
+            КОТОРЫЕ ДАРЯТ СВОБОДУ, УВЕРЕННОСТЬ И НОВЫЕ ВОЗМОЖНОСТИ</h2>
+          <a href="#" class="section__link link-point">
+            <img src="../../assets/icons/point.svg" alt="Arrow Right">
+            <span>О НАС</span>
+          </a>
+        </div>
+        <div class="about-intro__wrapper">
+          <div class="about-intro__content">
+            <div class="about-intro__text">
+              <p>
+                Мастерская «ПРОМ» была основана в 2015 году группой инженеров‑протезистов, объединённых общей идеей:
+                сделать современное протезирование доступным для каждого.
+              </p>
+              <p>
+                К 2018 году, благодаря наработанному опыту и положительным отзывам, мастерская расширила
+                производственные мощности и внедрила цифровые технологии: 3D‑сканирование культи, компьютерное
+                моделирование приёмных гильз, прототипирование на 3D‑принтере. Это позволило повысить точность подгонки
+                и сократить сроки изготовления.
+                Выход на новый уровень
+              </p>
+              <p>
+                В 2020 году «ПРОМ» получила аккредитацию на работу по государственным контрактам, начав сотрудничать с
+                Социальным фондом и региональными центрами реабилитации. Параллельно развивалось направление спортивных
+                и специализированных протезов — для пловцов, бегунов, музыкантов.
+              </p>
+              <p>Сегодня мастерская располагает современным производством, штатом сертифицированных протезистов и
+                реабилитологов, а также сервисным центром для гарантийного и постгарантийного обслуживания. За 10 лет
+                работы «ПРОМ» помогла более чем 1 500 пациентам вернуться к активной жизни.</p>
+              <p> Мы верим, что технологии должны служить человеку. Наша цель — не просто протезы, а свобода движений,
+                уверенность и новые возможности для каждого клиента.</p>
+            </div>
+          </div>
+
+          <div class="about-intro__image">
+            <img src="../../assets/images/about.png" alt="Мастерская ПРОМ" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title title--h2">Наша команда</h2>
+          <a href="#" class="section__link link-point">
+            <img src="../../assets/icons/point.svg" alt="Arrow Right">
+            <span>Cотрудники</span>
+          </a>
+        </div>
+
+        <div class="team__grid">
+          <div class="team__item">
+            <div class="review-placeholder">
+              <p>Сотрудник</p>
+            </div>
+          </div>
+          <div class="team__item">
+            <div class="review-placeholder">
+              <p>Сотрудник</p>
+            </div>
+          </div>
+          <div class="team__item">
+            <div class="review-placeholder">
+              <p>Сотрудник</p>
+            </div>
+          </div>
+          <div class="team__item">
+            <div class="review-placeholder">
+              <p>Сотрудник</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="examples">
+      <div class="container">
+        <div class="examples__header">
+          <h2 class="examples__title title--h2">ПРИМЕРЫ НАШИХ ПРОТЕЗОВ</h2>
+          <a href="#" class="examples__link link-point">
+            <img src="../../assets/icons/point.svg" alt="Arrow Right">
+            <span>ПОРТФОЛИО</span>
+          </a>
+        </div>
+
+        <div class="swiper examples__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide examples__item">
+              <img src="../../assets/images/examples/img.png" alt="Протез 1">
+            </div>
+            <div class="swiper-slide examples__item">
+              <img src="../../assets/images/examples/img-1.png" alt="Протез 2">
+            </div>
+            <div class="swiper-slide examples__item">
+              <img src="../../assets/images/examples/img-2.png" alt="Протез 3">
+            </div>
+            <div class="swiper-slide examples__item">
+              <img src="../../assets/images/examples/img-3.png" alt="Протез 4">
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="swiper-pagination examples__pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+      <div class="container">
+        <div class="reviews__header">
+          <h2 class="reviews__title title--h2">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
+          <a href="#" class="reviews__link link-point">
+            <img src="../../assets/icons/point.svg" alt="Arrow Right">
+            <span>ОТЗЫВЫ</span>
+          </a>
+        </div>
+
+        <div class="swiper reviews__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="reviews__item">
+                <!-- Плейсхолдер для видео отзыва 1 -->
+                <div class="review-placeholder">
+                  <p>Отзыв клиента 1</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="reviews__item">
+                <!-- Плейсхолдер для видео отзыва 2 -->
+                <div class="review-placeholder">
+                  <p>Отзыв клиента 2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination reviews__pagination"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="container">
+        <div class="services__header">
+          <h2 class="services__title title--h2">НАШИ УСЛУГИ</h2>
+          <a href="#" class="services__link link-point">
+            <img src="../../assets/icons/point.svg" alt="Arrow Right">
+            <span>УСЛУГИ</span>
+          </a>
+        </div>
+
+        <div class="services__grid">
+          <!-- Service 1 -->
+          <div class="service-card service-card--blue">
+            <h3 class="service-card__title title--h3">ПЕРВИЧНАЯ КОНСУЛЬТАЦИЯ<br> И ДИАГНОСТИКА</h3>
+            <p class="service-card__description">
+              Проводим всестороннюю оценку состояния пациента и определяем оптимальные решения в области протезирования
+            </p>
+            <button class="btn btn--primary service-card__button">Подробнее</button>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card service-card--gray">
+            <h3 class="service-card__title title--h3">РЕМОНТ И ОБСЛУЖИВАНИЕ ПРОТЕЗОВ</h3>
+            <p class="service-card__description">
+              Проводим всестороннюю оценку состояния пациента и определяем оптимальные решения в области протезирования
+            </p>
+            <button class="btn btn--primary service-card__button">Подробнее</button>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card service-card--blue">
+            <h3 class="service-card__title title--h3">ИНДИВИДУАЛЬНОЕ<br> ИЗГОТОВЛЕНИЕ И ПОДГОНКА</h3>
+            <p class="service-card__description">
+              Проводим всестороннюю оценку состояния пациента и определяем оптимальные решения в области протезирования
+            </p>
+            <button class="btn btn--primary service-card__button">Подробнее</button>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card service-card--gray">
+            <h3 class="service-card__title title--h3">РЕАБИЛИТАЦИЯ И ОБУЧЕНИЕ</h3>
+            <p class="service-card__description">
+              Проводим всестороннюю оценку состояния пациента и определяем оптимальные решения в области протезирования
+            </p>
+            <button class="btn btn--primary service-card__button">Подробнее</button>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card service-card--blue">
+            <h3 class="service-card__title title--h3">ГАРАНТИЙНОЕ ОБСЛУЖИВАНИЕ</h3>
+            <p class="service-card__description">
+              Гарантируем качество и надежность протезов в течение установленного срока
+            </p>
+            <button class="btn btn--primary service-card__button">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="consultation">
+      <div class="container">
+        <div class="consultation__content">
+          <div class="consultation__left">
+            <h2 class="consultation__title title--h2">
+              НЕ УПУСТИТЕ ВОЗМОЖНОСТЬ ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ ДЛЯ ПОДБОРА
+              ИНДИВИДУАЛЬНОГО ПРОТЕЗА
+            </h2>
+            <p class="consultation__text">
+              Мы поможем вам разобраться в процессе получения компенсации и
+              максимально быстро оформить все необходимые документы.
+            </p>
+          </div>
+
+          <div class="consultation__right">
+            <h3 class="consultation__form-title">
+              Свяжитесь с нами для консультации
+            </h3>
+            <div class="consultation__form-content">
+              <form>
+                <div class="form-group">
+                  <span class="form-group__icon">
+                    <img src="../../assets/icons/phone.svg" alt="Phone" />
+                  </span>
+                  <input type="tel" class="form-input" placeholder="Номер телефона" />
+                </div>
+
+                <div class="form-group">
+                  <span class="form-group__icon">
+                    <img src="../../assets/icons/email.svg" alt="Email" />
+                  </span>
+                  <input type="email" class="form-input" placeholder="E-mail" />
+                </div>
+
+                <button type="submit" class="btn btn--primary consultation__submit">
+                  Получить консультацию
+                </button>
+                <label class="form-checkbox">
+                  <input type="checkbox" checked />
+                  <span>Соглашаюсь с условиями передачи данных</span>
+                </label>
+              </form>
+            </div>
+          </div>
+
+          <div class="consultation__contacts">
+            <a href="#" class="consultation__icon consultation__icon--whatsapp">
+              <img src="../../assets/icons/wa.svg" alt="WhatsApp" />
+            </a>
+            <a href="#" class="consultation__icon consultation__icon--telegram">
+              <img src="../../assets/icons/tg.svg" alt="Telegram" />
+            </a>
+            <a href="tel:+79534431220" class="consultation__phone">+7 (953) 443-12-20</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <!-- Logo Column -->
+        <div class="footer__column">
+          <div class="footer__logo">
+            <img src="../../assets/icons/logo-footer.svg" alt="ПрОМ" />
+          </div>
+        </div>
+
+        <div class="footer__columns">
+          <!-- Menu Column -->
+          <div class="footer__column">
+            <h3 class="footer__title">МЕНЮ</h3>
+            <ul class="footer__menu">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Цены</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Блог</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+
+          <!-- Catalog Column -->
+          <div class="footer__column">
+            <h3 class="footer__title">КАТАЛОГ</h3>
+            <ul class="footer__menu">
+              <li><a href="#">Каталог ТСР</a></li>
+              <li><a href="#">Протезы верхних конечностей</a></li>
+              <li><a href="#">Протезы нижних конечностей</a></li>
+              <li><a href="#">Детские протезы</a></li>
+            </ul>
+          </div>
+
+          <!-- Info Column -->
+          <div class="footer__column">
+            <h3 class="footer__title">ИНФОРМАЦИЯ</h3>
+            <ul class="footer__menu">
+              <li><a href="#">Политика конфиденциальности</a></li>
+              <li><a href="#">Пользовательское соглашение</a></li>
+              <li><a href="#">Публичная оферта</a></li>
+            </ul>
+          </div>
+
+          <!-- Contacts Column -->
+          <div class="footer__column">
+            <h3 class="footer__title">КОНТАКТЫ</h3>
+            <p class="footer__address">
+              Адрес: г. Тула, улица Каракозова, 71/2
+            </p>
+            <a href="tel:+79534431220" class="footer__phone">+7 (953) 443-12-20</a>
+            <div class="footer__socials">
+              <a href="#" class="footer__social footer__social--whatsapp">
+                <img src="../../assets/icons/wa.svg" alt="WhatsApp" />
+              </a>
+              <a href="#" class="footer__social footer__social--telegram">
+                <img src="../../assets/icons/tg.svg" alt="Telegram" />
+              </a>
+              <a href="#" class="footer__social footer__social--vk">
+                <img src="../../assets/icons/vk.svg" alt="VK" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

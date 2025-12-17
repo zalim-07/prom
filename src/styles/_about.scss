@@ -1,0 +1,102 @@
+@use "variables" as *;
+.section__header--about {
+    margin-bottom: 0;
+}
+.about-intro {
+    padding: 120px 0 100px;
+
+    @media (max-width: $breakpoint-tablet) {
+      padding: 100px 0;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-bottom: 0;
+    }
+  }
+  
+  .about-intro__wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 64px;
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+  }
+  
+  .about-intro__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about-intro__image {
+    margin-top: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .about-intro__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+
+  .about-intro__title {
+    max-width: 984px;
+    font-family: $font-family-heading;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 54px;
+    text-transform: uppercase;
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 28px;
+      line-height: 34px;
+    }
+
+  }
+
+  .team{
+    background: #FAFAFA;
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    @media (max-width: $breakpoint-tablet) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  .team__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .team__item {
+    background: #D9D9D9;
+    border-radius: 30px;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: $breakpoint-tablet) {
+      aspect-ratio: 1 / 1;
+      height: auto;
+    }
+  }
+  
+  

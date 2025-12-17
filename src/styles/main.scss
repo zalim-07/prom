@@ -2,6 +2,7 @@
 @use "variables";
 @use "common";
 @use "components";
+@use "layouts";
 @use "breadcrumbs";
 @use "swiper";
 @use "header";
@@ -18,4 +19,5 @@
 @use "catalog";
 @use "product";
 @use "page";
+@use "about";
 @use "footer";
