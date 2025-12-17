@@ -1,9 +1,13 @@
 @use "variables" as *;
 
 .page {
-    .services {
-        padding-top: 60px;
-    }
+  .services {
+    padding-top: 60px;
+  }
+
+  .services__header {
+    margin-bottom: 40px;
+  }
 }
 
 .page__content {
@@ -28,5 +32,16 @@
 
   .products {
     padding-top: 0;
+  }
+}
+
+.services--info {
+  .services__grid {
+    gap: 20px;
+  }
+
+  .service-card--blue {
+    background: linear-gradient(118.08deg, #2f9eee 33.71%, #8cc8ff 96.25%);
+    border-radius: 30px;
   }
 }
