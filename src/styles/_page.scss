@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+.page__content {
+  padding-top: 60px;
+
+  h1 {
+    font-family: $font-family-heading;
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 54px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 28px;
+      line-height: 34px;
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+  }
+
+  .products {
+    padding-top: 0;
+  }
+}
