@@ -1,5 +1,11 @@
 @use "variables" as *;
 
+.page {
+    .services {
+        padding-top: 60px;
+    }
+}
+
 .page__content {
   padding-top: 60px;
 
