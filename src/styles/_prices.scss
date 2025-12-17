@@ -280,7 +280,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media (max-width: $breakpoint-tablet) {
+  @media (max-width: $breakpoint-mobile) {
     height: 560px;
     display: flex;
     align-items: center;
