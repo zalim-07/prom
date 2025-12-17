@@ -1,0 +1,180 @@
+@use "variables" as *;
+
+.section__header--contacts {
+  margin-top: 120px;
+  @media screen and (max-width: $breakpoint-tablet) {
+    margin-top: 60px;
+  }
+}
+.contacts__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+}
+
+.contact-card {
+  background: $white;
+  border-radius: 50px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #bebaba;
+  min-height: 370px;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 30px;
+    min-height: inherit;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 24px;
+    border-radius: 20px;
+  }
+}
+
+.contact-card__text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-card__form {
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.contact-card__submit {
+  width: 100%;
+  margin-top: 0;
+}
+
+.contact-card__title {
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: $primary-blue;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  @media screen and (max-width: $breakpoint-lg) {
+    text-align: center;
+  }
+}
+
+.contact-card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card__address,
+.contact-card__hours {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 27px;
+
+  @media screen and (max-width: calc($container-max-width - 60px)) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  @media screen and (max-width: $breakpoint-xl) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.contact-card__phone {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.contact-card__phone-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card__phone-number {
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 54px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $text-dark;
+
+  @media screen and (max-width: calc($container-max-width - 60px)) {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  &:hover {
+    color: $primary-blue;
+  }
+}
+
+// Social networks in contact card
+.contact-card .footer__socials {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.contact-card .footer__social {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: $transition;
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.map__content {
+  border-radius: 30px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    display: none;
+  }
+}
