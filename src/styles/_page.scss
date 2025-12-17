@@ -5,15 +5,19 @@
     // padding-top: 60px;
   }
 
-  .services__header {
-    margin-bottom: 40px;
-  }
-
   .steps__grid {
     gap: 25px 20px;
   }
   .step-card {
     min-height: 440px;
+  }
+}
+
+.services.services--info {
+  padding-bottom: 120px;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding-bottom: 60px;
   }
 }
 

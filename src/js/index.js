@@ -16,3 +16,6 @@ window.SwiperModules = { Navigation, Pagination, Autoplay, Thumbs };
 
 // Import Swiper initialization
 import './swiper.js';
+
+// Import Accordion
+import './accordion.js';

@@ -1,0 +1,65 @@
+@use "variables" as *;
+
+.advantages {
+  padding: 120px 0;
+}
+
+.advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.advantages__card {
+  border-radius: 20px;
+  border: 2px solid #e2eaf2;
+  padding: 80px 30px 40px;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    min-height: 300px;
+  }
+}
+
+.advantages__number {
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 80px;
+  text-transform: uppercase;
+  color: $primary-blue;
+}
+
+.advantages__text {
+    font-family: $font-family-heading;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #2E363E;
+    min-height: 116px;
+
+    @media screen and (max-width: calc($container-max-width - 60px)) {
+        font-size: 28px;
+        line-height: 34px;
+        min-height: 30px;
+    }
+
+    @media screen and (max-width: $breakpoint-xl) {
+        font-size: 24px;
+        line-height: 26px;
+    }
+}

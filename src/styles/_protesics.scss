@@ -1,0 +1,144 @@
+@use "variables" as *;
+
+.protesics {
+  padding: 120px 0;
+  background-color: #fafafa;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 60px 0;
+  }
+}
+
+.protesics__title {
+  margin-bottom: 80px;
+  color: $text-dark;
+  text-align: left;
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 54px;
+  text-transform: uppercase;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin-bottom: 40px;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 30px;
+  }
+}
+
+.protesics__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.protesics__column {
+  display: flex;
+  flex-direction: column;
+  max-width: 560px;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    max-width: 100%;
+  }
+}
+
+.protesics__column-title {
+  font-family: $font-family-heading;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  text-transform: uppercase;
+
+  color: $primary-blue;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: $breakpoint-xl) {
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.protesics__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.protesics__card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 100px;
+  border: 1px solid #2f9eee;
+  background: $white;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: $breakpoint-xl) {
+    border: none;
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    min-height: 230px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.protesics__card-image {
+  flex: 0 0 140px;
+  height: 140px;
+  border-radius: 999px;
+  overflow: hidden;
+
+  @media screen and (max-width: $breakpoint-xl) {
+    flex: 0 0 60px;
+    height: 60px;
+    border-radius: 999px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.protesics__card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.protesics__card-title {
+  font-family: $font-family-heading;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.protesics__card-text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  margin: 0;
+}
