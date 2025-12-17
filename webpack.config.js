@@ -59,8 +59,9 @@ module.exports = (env, argv) => {
       watchFiles: ["src/**/*"],
       historyApiFallback: {
         rewrites: [
+          // Строгое сопоставление пути /pages/{name} или /pages/{name}/
           ...pages.map((page) => ({
-            from: new RegExp(`^\\/pages\\/${page.name}`),
+            from: new RegExp(`^\\/pages\\/${page.name}\\/?$`),
             to: `/pages/${page.name}/index.html`,
           })),
         ],
