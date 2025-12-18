@@ -1,0 +1,85 @@
+@use "variables" as *;
+
+/* Generic popup */
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup--open {
+  display: flex;
+}
+
+.popup__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.popup__dialog {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+  width: 100%;
+  margin: 0 16px;
+}
+
+.popup__content {
+  background: $white;
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 32px 24px;
+  }
+
+  input {
+    background: #fafafa;
+  }
+}
+
+.popup__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+
+  @media (max-width: $breakpoint-mobile) {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.popup__close-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  color: $text-dark;
+}
+
+/* Popup consultation form tweaks */
+.popup-consultation .consultation__form-title {
+  margin-bottom: 20px;
+}
+
+.popup-consultation .consultation__form-content .form-checkbox {
+  margin-top: 12px;
+}
+
+.popup-consultation .consultation__submit {
+  width: 100%;
+}

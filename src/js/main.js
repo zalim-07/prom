@@ -71,6 +71,108 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Popup: Получить протез
+  const prosthesisPopup = document.querySelector('.popup-consultation');
+  const prosthesisPopupDialog = prosthesisPopup?.querySelector('.popup__dialog');
+  const prosthesisPopupOverlay = prosthesisPopup?.querySelector('.popup__overlay');
+  const prosthesisPopupClose = prosthesisPopup?.querySelector('.popup__close');
+  const prosthesisOpenButtons = document.querySelectorAll('.js-open-prosthesis-popup');
+
+  const openProsthesisPopup = (event) => {
+    if (!prosthesisPopup) return;
+    if (event) event.preventDefault();
+    prosthesisPopup.classList.add('popup--open');
+    body.classList.add('menu-open');
+  };
+
+  const closeProsthesisPopup = () => {
+    if (!prosthesisPopup) return;
+    prosthesisPopup.classList.remove('popup--open');
+    body.classList.remove('menu-open');
+  };
+
+  prosthesisOpenButtons.forEach((btn) => {
+    btn.addEventListener('click', openProsthesisPopup);
+  });
+
+  if (prosthesisPopupOverlay) {
+    prosthesisPopupOverlay.addEventListener('click', closeProsthesisPopup);
+  }
+
+  if (prosthesisPopupClose) {
+    prosthesisPopupClose.addEventListener('click', closeProsthesisPopup);
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && prosthesisPopup && prosthesisPopup.classList.contains('popup--open')) {
+      closeProsthesisPopup();
+    }
+  });
+
+  // Catalog header mega menu (Каталог ТСР)
+  const catalogMenuToggle = document.querySelector('.header-catalog__catalog-btn');
+  const catalogMegaMenu = document.querySelector('.catalog-menu');
+
+  if (catalogMenuToggle && catalogMegaMenu) {
+    const toggleCatalogMenu = (event) => {
+      event.preventDefault();
+      const isOpen = catalogMegaMenu.classList.contains('catalog-menu--open');
+      catalogMegaMenu.classList.toggle('catalog-menu--open', !isOpen);
+    };
+
+    catalogMenuToggle.addEventListener('click', toggleCatalogMenu);
+
+    // Close on outside click
+    document.addEventListener('click', (event) => {
+      if (!catalogMegaMenu.contains(event.target) && !catalogMenuToggle.contains(event.target)) {
+        catalogMegaMenu.classList.remove('catalog-menu--open');
+      }
+    });
+
+    // Close on ESC
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        catalogMegaMenu.classList.remove('catalog-menu--open');
+      }
+    });
+
+    // Category hover / click behavior
+    const categoryButtons = catalogMegaMenu.querySelectorAll('.catalog-menu__category');
+    const panels = catalogMegaMenu.querySelectorAll('.catalog-menu-panel');
+
+    const setActiveCategory = (category) => {
+      if (!category) return;
+
+      categoryButtons.forEach((btn) => {
+        const isActive = btn.dataset.category === category;
+        btn.classList.toggle('catalog-menu__category--active', isActive);
+      });
+
+      panels.forEach((panel) => {
+        const isActive = panel.dataset.category === category;
+        panel.classList.toggle('catalog-menu-panel--active', isActive);
+      });
+    };
+
+    categoryButtons.forEach((btn) => {
+      const category = btn.dataset.category;
+      if (!category) return;
+
+      // Desktop: смена по наведению
+      btn.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 1280) {
+          setActiveCategory(category);
+        }
+      });
+
+      // Мобайл / планшет: смена по клику
+      btn.addEventListener('click', (event) => {
+        event.preventDefault();
+        setActiveCategory(category);
+      });
+    });
+  }
+
   // Mobile Search Panel (for catalog page)
   const searchBtn = document.querySelector('.header-catalog__search-btn');
   const mobileSearchPanel = document.querySelector('.mobile-search-panel');
@@ -118,47 +220,55 @@ document.addEventListener('DOMContentLoaded', () => {
   const priceTo = document.getElementById('price-to');
   const priceRangeFill = document.querySelector('.filter-price__range-fill');
 
-  if (priceRangeMin && priceRangeMax && priceFrom && priceTo && priceRangeFill) {
-    const minValue = parseInt(priceRangeMin.min);
-    const maxValue = parseInt(priceRangeMax.max);
+  const updatePriceRange = () => {
+    if (!priceRangeMin || !priceRangeMax || !priceFrom || !priceTo || !priceRangeFill) return;
 
-    const updatePriceRange = () => {
-      const min = parseInt(priceRangeMin.value);
-      const max = parseInt(priceRangeMax.value);
+    const min = parseInt(priceRangeMin.min);
+    const max = parseInt(priceRangeMin.max);
+    const from = parseInt(priceRangeMin.value);
+    const to = parseInt(priceRangeMax.value);
 
-      // Ensure min doesn't exceed max
-      if (min >= max) {
-        priceRangeMin.value = max - 1;
-        priceFrom.value = max - 1;
-      }
+    priceFrom.value = from;
+    priceTo.value = to;
 
-      // Update input fields
-      priceFrom.value = priceRangeMin.value;
-      priceTo.value = priceRangeMax.value;
+    const left = ((from - min) / (max - min)) * 100;
+    const right = ((to - min) / (max - min)) * 100;
 
-      // Update fill position
-      const minPercent = ((parseInt(priceRangeMin.value) - minValue) / (maxValue - minValue)) * 100;
-      const maxPercent = ((parseInt(priceRangeMax.value) - minValue) / (maxValue - minValue)) * 100;
-      
-      priceRangeFill.style.left = minPercent + '%';
-      priceRangeFill.style.right = (100 - maxPercent) + '%';
-    };
+    priceRangeFill.style.left = `${left}%`;
+    priceRangeFill.style.right = `${100 - right}%`;
+  };
 
-    priceRangeMin.addEventListener('input', updatePriceRange);
-    priceRangeMax.addEventListener('input', updatePriceRange);
-
-    priceFrom.addEventListener('input', (e) => {
-      let value = parseInt(e.target.value) || minValue;
-      if (value < minValue) value = minValue;
-      if (value >= parseInt(priceRangeMax.value)) value = parseInt(priceRangeMax.value) - 1;
+  if (priceRangeMin && priceRangeMax) {
+    priceRangeMin.addEventListener('input', () => {
+      let value = parseInt(priceRangeMin.value);
+      const maxValue = parseInt(priceRangeMax.value) - 1;
+      if (value >= maxValue) value = maxValue;
       priceRangeMin.value = value;
       updatePriceRange();
     });
 
-    priceTo.addEventListener('input', (e) => {
-      let value = parseInt(e.target.value) || maxValue;
+    priceRangeMax.addEventListener('input', () => {
+      let value = parseInt(priceRangeMax.value);
+      const minValue = parseInt(priceRangeMin.value) + 1;
+      if (value <= minValue) value = minValue;
+      priceRangeMax.value = value;
+      updatePriceRange();
+    });
+
+    priceFrom.addEventListener('change', () => {
+      let value = parseInt(priceFrom.value) || parseInt(priceRangeMin.min);
+      const maxValue = parseInt(priceRangeMax.value) - 1;
+      if (value < parseInt(priceRangeMin.min)) value = parseInt(priceRangeMin.min);
+      if (value >= maxValue) value = maxValue;
+      priceRangeMin.value = value;
+      updatePriceRange();
+    });
+
+    priceTo.addEventListener('change', () => {
+      let value = parseInt(priceTo.value) || parseInt(priceRangeMax.max);
+      const maxValue = parseInt(priceRangeMax.max);
+      if (value < parseInt(priceRangeMin.value) + 1) value = parseInt(priceRangeMin.value) + 1;
       if (value > maxValue) value = maxValue;
-      if (value <= parseInt(priceRangeMin.value)) value = parseInt(priceRangeMin.value) + 1;
       priceRangeMax.value = value;
       updatePriceRange();
     });
@@ -279,11 +389,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
       
-      if (isExpanded) {
-        specsExpandLink.textContent = 'Все характеристики';
-      } else {
-        specsExpandLink.textContent = 'Скрыть характеристики';
-      }
+      specsExpandLink.textContent = isExpanded ? 'Показать все характеристики' : 'Скрыть характеристики';
     });
   }
+
+  // Product gallery thumbs scroll (if needed later)
 });

@@ -5,6 +5,140 @@
   min-height: calc(100vh - 400px);
 }
 
+// Header catalog mega menu
+.catalog-menu {
+  display: none;
+
+  &.catalog-menu--open {
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    margin-top: 10px;
+  }
+}
+
+.catalog-menu__inner {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  border: 1px solid #f0f0f0;
+  border-radius: 15px;
+  background: #ffffff;
+  max-width: calc(100% - 80px);
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0px 2px #0001;
+
+  @media screen and (max-width: calc($container-max-width - 60px)) {
+    max-width: 100%;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.catalog-menu__sidebar {
+  background: $white;
+  overflow: hidden;
+}
+
+.catalog-menu__categories {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.catalog-menu__category {
+  width: 100%;
+  padding: 10px 18px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-family: $font-family;
+  font-size: 14px;
+  line-height: 1.3;
+  color: $text-dark;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background: #f5f5f5;
+  }
+
+  &.catalog-menu__category--active {
+    background: $primary-blue;
+    color: $white;
+  }
+}
+
+.catalog-menu__content {
+  background: $white;
+  border-left: 1px solid #f0f0f0;
+  padding: 32px 32px 28px;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.catalog-menu-panel {
+  display: none;
+}
+
+.catalog-menu-panel--active {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.catalog-menu__items {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+
+  @media screen and (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.catalog-menu-card {
+  text-align: center;
+}
+
+.catalog-menu-card__image {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto 16px;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+  }
+}
+
+.catalog-menu-card__title {
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.catalog-menu__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.catalog-menu__button {
+  min-width: 220px;
+  border-radius: 50px;
+}
+
 // Catalog Layout
 .catalog-layout {
   display: grid;
@@ -514,9 +648,6 @@
   color: #888;
   cursor: pointer;
   white-space: nowrap;
-
-  &--active {
-  }
 
   &--price {
     .catalog-sort__arrow {

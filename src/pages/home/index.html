@@ -13,21 +13,21 @@
     <div class="container">
       <div class="header__content">
         <div class="header__logo">
-          <a href="#" class="header__logo-link">
+          <a href="/" class="header__logo-link">
             <img src="../../assets/icons/logo.svg" alt="ПрОМ">
           </a>
         </div>
 
         <nav class="header__nav">
-          <a href="#">ГЛАВНАЯ</a>
-          <a href="#">КАТАЛОГ</a>
-          <a href="#">КАТАЛОГ ТСР</a>
-          <a href="#">О НАС</a>
-          <a href="#">УСЛУГИ</a>
-          <a href="#">ЦЕНЫ</a>
-          <a href="#">FAQ</a>
-          <a href="#">БЛОГ</a>
-          <a href="#">КОНТАКТЫ</a>
+          <a href="../home/index.html">ГЛАВНАЯ</a>
+          <a href="../prosthetics/index.html">КАТАЛОГ</a>
+          <a href="../catalog/index.html">КАТАЛОГ ТСР</a>
+          <a href="../about/index.html">О НАС</a>
+          <a href="../services/index.html">УСЛУГИ</a>
+          <a href="../prices/index.html">ЦЕНЫ</a>
+          <a href="../faq/index.html">FAQ</a>
+          <a href="../page/index.html">БЛОГ</a>
+          <a href="../contacts/index.html">КОНТАКТЫ</a>
         </nav>
 
         <div class="header__contacts">
@@ -113,8 +113,8 @@
 
         <div class="hero__buttons">
           <a href="#" class="btn btn--primary">Каталог протезов</a>
-          <a href="#" class="btn btn--outline desctop-only">Получить протез</a>
-          <a href="#" class="btn btn--outline mobile-only">Получить консультацию</a>
+          <a href="#" class="btn btn--outline desctop-only js-open-prosthesis-popup">Получить протез</a>
+          <a href="#" class="btn btn--outline mobile-only js-open-prosthesis-popup">Получить консультацию</a>
         </div>
       </div>
     </div>
@@ -532,6 +532,44 @@
       </div>
     </div>
   </footer>
+
+  <!-- Popup: Получить протез -->
+  <div class="popup popup-consultation">
+    <div class="popup__overlay"></div>
+    <div class="popup__dialog">
+      <button class="popup__close" type="button" aria-label="Закрыть">
+        <span class="popup__close-icon">✕</span>
+      </button>
+      <div class="popup__content">
+        <h3 class="consultation__form-title">Свяжитесь с нами для консультации</h3>
+        <div class="consultation__form-content">
+          <form>
+            <div class="form-group">
+              <span class="form-group__icon">
+                <img src="../../assets/icons/phone.svg" alt="Phone" />
+              </span>
+              <input type="tel" class="form-input" placeholder="Номер телефона" />
+            </div>
+
+            <div class="form-group">
+              <span class="form-group__icon">
+                <img src="../../assets/icons/email.svg" alt="Email" />
+              </span>
+              <input type="email" class="form-input" placeholder="E-mail" />
+            </div>
+
+            <button type="submit" class="btn btn--primary consultation__submit">
+              Получить консультацию
+            </button>
+            <label class="form-checkbox">
+              <input type="checkbox" checked />
+              <span>Соглашаюсь с условиями передачи данных</span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
