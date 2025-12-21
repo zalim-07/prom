@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: prom_database
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: prom_root_password
+      MYSQL_DATABASE: prom_db
+      MYSQL_USER: prom_user
+      MYSQL_PASSWORD: prom_password
+    volumes:
+      - db_data:/var/lib/mysql
+
+  wordpress:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: prom_wordpress
+    depends_on:
+      - db
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: prom_user
+      WORDPRESS_DB_PASSWORD: prom_password
+      WORDPRESS_DB_NAME: prom_db
+      PHP_INI_UPLOAD_MAX_FILESIZE: 64M
+      PHP_INI_POST_MAX_SIZE: 64M
+      PHP_INI_MAX_EXECUTION_TIME: 300
+      PHP_INI_MAX_INPUT_TIME: 300
+      PHP_INI_MEMORY_LIMIT: 256M
+    volumes:
+      - ./wordpress/wp-content/themes:/var/www/html/wp-content/themes
+
+  browsersync:
+    image: node:18-alpine
+    container_name: prom_browsersync
+    working_dir: /work
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    volumes:
+      - ./:/work
+      - /work/node_modules
+    command: sh -c "npm install -g browser-sync && browser-sync start --config bs-config.js"
+    depends_on:
+      - wordpress
+    restart: always
+
+volumes:
+  db_data:
